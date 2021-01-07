@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+        var avg = 0;
+        var num = prompt("输入总人数:")
+        for (var i=1;i<=num;i++) {
+            var score = prompt('输入第'+i+'个学生成绩');
+
+            sum=sum + parseFloat(score);           
+        }
+        avg = sum/num;
+        alert(sum)
+        alert(avg)
+/*         for (i=1;i<=3;i++) {
+            console.log('i');
+            for(j=1;j<=3;j++) {
+
+            }
+        } */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

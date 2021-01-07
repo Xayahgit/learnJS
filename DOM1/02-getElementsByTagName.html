@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>JavaScript高级程序设计1</li>
+        <li>JavaScript高级程序设计2</li>
+        <li>JavaScript高级程序设计3</li>
+        <li>JavaScript高级程序设计4</li>
+        <li>JavaScript高级程序设计5</li>
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+
+        // 依此打印其中的元素对象
+        for(var i =0;i<lis.length;i++) {
+            console.log(lis[i]);
+        }
+        // 页面中只有一个，返回的也是伪数组
+
+        // var ol = document.getElementsByTagName('li');
+        // console.log();
+        // 常用
+        var ol =document.getElementById('ol');
+        console.log(ol.getElementsByTagName('li'));
+
+    </script>
+</body>
+</html>

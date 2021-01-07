@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .msg {
+            width: 400px;
+            height: 150px;
+            border: 1px solid #000;
+        }
+
+        .msg_caption .bigger {
+            width: 25px;
+            height: 10px;
+            border: 1px solid #000;
+            background-color: #ccc;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        .msg_caption .smaller {
+            width: 25px;
+            height: 10px;
+            border: 1px solid #000;
+            background-color: #ccc;
+            margin-left: 10px;
+        }
+        .textarea {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function () {
+            var $comment = $('#comment');
+            $('.bigger').click(function() {
+                if($comment.height()<500) {
+                    $comment.height($comment.height()+50);
+                }
+            });
+            $('.smaller').click(function() {
+                if($comment.height()>50) {
+                    $comment.height($comment.height()-50);
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <form>
+        <div class="msg">
+            <div class="msg_caption">
+                <span class="bigger">放大</span>
+                <span class="smaller">缩小</span>
+            </div>
+            <div>
+                <textarea id="comment" cols="30" rows="8">多行文本高度变化 多行文本高度变化多行文本高度变化 多行文本高度变化 多行文本高度变化 多行文本高度变化 
+                    多行文本高度变化 多行文本高度变化 多行文本高度变化 多行文本高度变化 多行文本高度变化 多行文本高度变化 多行文本高度变化 多行文本高度变化 
+                </textarea>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

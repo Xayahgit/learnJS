@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function(){
+            alert('1');
+            var $box1 = $('.box1');
+            var $box2 = $('#box2');
+            console.log($box1);
+            console.log($box2);
+            var $p = $('<p>lingxiaoyi</p>');
+            console.log($p);
+            var span = document.getElementsByTagName('spam')[0];
+            var $span = $(span);
+            
+
+        });
+    </script>
+</head>
+<body>
+    <div class="box1"></div>
+    <div id="box2"></div>
+    <span>woshi</span>
+</body>
+</html>

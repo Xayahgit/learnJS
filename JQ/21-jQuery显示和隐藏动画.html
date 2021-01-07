@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background: red;
+            display: none;
+        }
+    </style>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function () {
+            $('button').eq(0).click(function(){
+   /*              $('div').css({
+                    display: 'block'
+                }); */
+                $('div').show(1000,function(){
+                    alert('动画结束后调用');
+                });
+            })
+            $('button').eq(1).click(function(){
+/*                 $('div').css({
+                    display: 'none'
+                }); */
+                $('div').hide(1000,function(){
+                    alert('222');
+                });
+            })
+            $('button').eq(2).click(function(){
+                $('div').toggle(1000);
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+</body>
+
+</html>

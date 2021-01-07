@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .class1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+        } 
+        .class2 {
+            border: 20px solid #000;
+        }
+    </style>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function(){
+            var btns = document.getElementsByTagName('button');
+            btns[0].onclick = function() {
+                $('div').addClass('class1 class2');
+            }
+            btns[1].onclick = function() {
+                $('div').removeClass('class2 class1')
+            }
+            btns[2].onclick = function() {
+                $('div').toggle('class2 class1')
+            }
+        })
+    </script>
+</head>
+<body>
+    <button>添加类</button>
+    <button>删除类</button>
+    <button>切换类</button>
+    <div></div>
+</body>
+</html>

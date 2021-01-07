@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        // 1.jquery不会等图片加载完就直接执行
+        // 2.jquery后面的不会覆盖前面的
+        window.onload = function(ev) {
+            var img = document.querySelector('img');
+            console.log(img);
+
+        }
+
+        $(document).ready(function(){
+            var $img = $('img')[0];
+            console.log($img);
+        });
+    </script>
+</head>
+<body>
+    <img src="mil.jpg" alt="">
+</body>
+</html>

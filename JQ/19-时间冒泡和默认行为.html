@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function(){
+            $('.son').click(function(e) {
+                alert('son');
+                // return false;
+                e.stopPropagation();
+            })
+            $('.father').click(function() {
+                alert('father');
+            })
+            $('a').click(function(e){
+                alert('111');
+                e.preventDefault();  //组织默认事件的发生
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <a href="http://www.baidu.com">我是百度</a>
+    <form action="http://www.taobao.com">
+        <input type="text">
+        <input type="submit">
+    </form>
+</body>
+</html>

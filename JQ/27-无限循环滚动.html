@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            width: 600px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        div>ul {
+            list-style: none;
+            width: 1800px;
+            height: 200px;
+            background: #000;
+        }
+        ul>li {
+            width: 300px;
+            height: 200px;
+            float: left;
+        }
+        ul>li>img {
+            width: 100%;
+        }
+    </style>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function(){
+            //1.让图片滚动起来
+            var offset = 0;
+            var timer;
+            function autoPlay() {
+                timer = setInterval(function() {
+                    offset +=-10;
+                    if(offset<=-1200) {
+                        offset = 0;                   
+                    }
+                $('ul').css('marginLeft',offset);
+                },50)
+            }
+            autoPlay();
+
+            // 2.监听li的移入和移出事件
+            $('li').hover(function() {
+                clearInterval(timer);
+                $(this).siblings().fadeTo(100,0.5);
+                $(this).fadeTo(100,1);
+
+            },function() {
+
+                autoPlay(); 
+                $('li').fadeTo(100,1);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="mil.jpg" alt=""></li>
+            <li><img src="elec.jpg" alt=""></li>
+            <li><img src="len.jpg" alt=""></li>
+            <li><img src="subp.jpg" alt=""></li>
+            <li><img src="mil.jpg" alt=""></li>
+            <li><img src="elec.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

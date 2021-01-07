@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function(){
+            $('#send').click(function() {
+                $('#resText').load("test.html");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="Ajax获取" id='send' />
+    <div class="comment">已有评论</div>
+    <div id="resText"></div>
+</body>
+</html>

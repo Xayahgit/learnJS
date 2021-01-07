@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>abc</div>
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <script>
+        // 1.e.target返回的是触发事件的对象 但是this返回的是绑定事件的对象
+        var div = document.querySelector('div');
+        div.addEventListener('click',function(e) {
+            console.log(e.target);
+            console.log(this);
+        })
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function(){
+            // 我们给ul绑定了事件那么this 就指向了ul
+            console.log(this);
+            console.log(e.target);
+        })
+    </script>
+</body>
+</html>

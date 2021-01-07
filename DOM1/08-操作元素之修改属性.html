@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="a">aya</button>
+    <button id="b">byb</button> <br>
+    <img src="img.png" alt="" title="milet">
+    <script>
+        // 1.获取元素
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+        var img = document.querySelector('img');
+        // 2.注册事件
+        b.onclick = function() {
+            img.src = 'recom.png';
+            img.title = 'nsa'
+        }
+        a.onclick = function() {
+            img.src = 'img.png';
+            img.title='milet'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 50px solid #000;
+            margin-left: 50px;
+            position: relative;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+    <script src='jquery-3.5.1.js'></script>
+    <script>
+        $(function(){
+            var btns = document.querySelectorAll('button');
+            btns[0].onclick = function() {
+                // console.log($('.father').width());
+                // console.log($('.son').offset().left);
+                console.log($('.son').position().left);
+            }
+            btns[1].onclick = function() {
+                $('.father').width('500px')
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <button>获取</button>
+    <button>设置</button>
+</body>
+</html>
